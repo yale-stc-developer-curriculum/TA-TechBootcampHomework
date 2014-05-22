@@ -1,0 +1,9 @@
+Well... this directory name would be a pain to type out, now wouldn't it? Thankfully, there's an easier way!
+
+Start typing out your command:
+
+$ cd This
+
+Now, instead of hitting enter or typing out the rest of the name, hit tab. Ta-da! Hitting tab will auto-complete whatever you're typing.
+
+But this will only work if you've typed enough of the filename or directory name to uniquely pick out just one thing. If there are two or more things whose names begin with 'This', then tab won't auto-complete. cd into the next directory and see what happens.

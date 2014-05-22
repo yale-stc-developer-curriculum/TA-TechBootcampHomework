@@ -1,0 +1,13 @@
+Whew!
+
+A bit annoying typing the same command over and over again, eh?
+
+But there's an easier way! If your previous command was
+
+$ cd 898
+
+then hit the up arrow key and you'll see
+
+$ cd 898
+
+pop back onto your command line! You can view your previously entered commands by hitting the up arrow key. Try using this command to proceed.

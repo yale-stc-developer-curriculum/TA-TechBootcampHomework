@@ -1,0 +1,13 @@
+Dead end for real this time?
+
+You try running 'ls -a' and find that there's nothing but this script file in the current directory?
+
+Have no fear! To keep going, we'll have to make a new directory 'new' using the command
+
+$ mkdir new
+
+Once you've created this directory (check with ls!), run the script 'script.sh' by running the command
+
+$ sh script.sh
+
+and you'll get further instructions!

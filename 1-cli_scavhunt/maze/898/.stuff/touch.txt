@@ -1,0 +1,7 @@
+So you've made and removed directories, but what about files?
+
+You can create and remove files from the terminal too! Entering the command
+
+$ touch FILENAME
+
+will create a file called FILENAME. Try making a file called file.txt and run the script once you're done!

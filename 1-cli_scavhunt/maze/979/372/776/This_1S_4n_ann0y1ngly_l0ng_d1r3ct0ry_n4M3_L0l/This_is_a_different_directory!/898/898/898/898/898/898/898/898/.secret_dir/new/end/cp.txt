@@ -1,0 +1,7 @@
+Oh look! A box! If only we had something to put in it...
+
+Well we have this file stuff.txt! Entering the command
+
+$ cp FILENAME DESTINATION
+
+will copy the file FILENAME to DESTINATION (gasp!). Try copying stuff.txt into the 'box' directory and run the script.

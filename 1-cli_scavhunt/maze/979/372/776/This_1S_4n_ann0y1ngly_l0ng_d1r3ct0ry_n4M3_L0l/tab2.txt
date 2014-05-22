@@ -1,0 +1,9 @@
+If you tried hitting tab again after typing 'cd This', then it didn't work, did it?
+
+That's alright! If you have this on your command line...
+
+$ cd This
+
+Then try hitting tab twice to see what happens. You'll see a list of the files/directories whose names begin with 'This'! Now type out enough of the directory name to uniquely pick it out and hit tab again. This should auto-complete successfully.
+
+Now cd into the directory 'This_is_a_different_directory!' and keep cd'ing down into the directories!

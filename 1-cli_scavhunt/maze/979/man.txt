@@ -1,0 +1,9 @@
+As you're navigating this directory tree, you'll probably run into some command line errors.
+
+If you ever need help with the syntax for a command COMMAND_NAME, just type
+
+$ man COMMAND_NAME
+
+and you'll get the man page for the command. This will tell you what the command does, what arguments it takes, and what those arguments do. To exit a man page, press q. Try it out!
+
+Your next instructions are in the directory named '372'.

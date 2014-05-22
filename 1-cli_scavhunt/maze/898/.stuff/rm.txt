@@ -1,0 +1,3 @@
+Now I'll ask you to do a few things. Ready?
+
+Use the command rm with the recursive option to remove the 'next' directory and all of its contents. Then use rm to remove this file. That's right, the 'rm.txt' file! Once all of that destruction and mayhem is over with, use mkdir to create a directory called 'end'. Then run the script!

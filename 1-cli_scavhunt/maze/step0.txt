@@ -1,0 +1,15 @@
+Welcome!
+
+To figure out where you are in your directory tree, type the command
+
+$ pwd
+
+Note that the '$' represents your command prompt (i.e., it's how your terminal can tell you it's waiting for a command), so you shouldn't type out the '$' when trying a command. So in this case, just write 'pwd' and hit enter!
+
+Psst! Throughout this maze of directories, you'll notice some .txt files that may or may not contain useful information. Typing the command
+
+$ cat FILENAME
+
+will output the contents of FILENAME to your terminal for reading. You can also use any of the command line editors (e.g., vim, nano, less) to view the contents of a plaintext file, although for this exercise, you'll only need to use cat.
+
+After you do this, type 'cd' followed by the name of the directory 979 to get to your next set of instructions!

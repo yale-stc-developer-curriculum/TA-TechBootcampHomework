@@ -1,0 +1,17 @@
+Well hello!
+
+It looks like we've hit a dead end! But have we?
+
+Try the command
+
+$ ls
+
+to see a list of the files and directories in the current directory. Still looks like nothing's in this directory, right?
+
+Now try running the same command with a new flag:
+
+$ ls -a
+
+The flag '-a' will tell the terminal to list the hidden contents of the current directory alongside the visible stuff!
+
+P.S. Hidden files and directories are the ones whose names begin with a '.' but there's really nothing special about them. Often, files and directories are hidden to prevent the user from accidentally modifying or deleting them.
