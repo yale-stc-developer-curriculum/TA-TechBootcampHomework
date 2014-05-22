@@ -1,9 +1,0 @@
-There are two scripts in this directory! What's going on?
-
-Well the first script (script6.sh) spits out a jumble of nonsense text. The second script (script7.sh) is looking for some password. I wonder what would happen if script6.sh could feed its nonsense text into script7.sh...
-
-We'll try just that! How? Well in bash (the shell your presumably running in your terminal window), you can use the '|' character (called a 'pipe') to pipe the output of one command into another command as its input. The usage of '|' goes like this:
-
-$ COMMAND1 | COMMAND2
-
-Since we have a script that likes talking and one that likes listening, we'll link them together with '|'. Try it out and see what happens!
