@@ -1,7 +1,7 @@
 ##GitHub Assignment -- Favorites
 - Divide into 6 teams; each with 5 people.
 
-1. Start by cloning this repository onto your computer.
+1. Start by cloning the 'favorites' repository (https://github.com/yale-stc-developer-curriculum/favorites) onto your computer.
 2. Pick a team name and one person should **create a new branch** for your team. Push the branch to origin. 
 3. Other team members should pull this branch and switch to it.  Now we're ready to roll.
 4. Each person on your team should create one of the following files, add their favorites of that category to the file, and save it to your branch:
