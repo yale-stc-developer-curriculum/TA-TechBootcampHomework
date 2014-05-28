@@ -4,9 +4,11 @@
 # greet("maya") returns "Hello Maya!"
 # greet("JACK") returns "Hello Jack!"
 
+def greet(name)
 
 
 
+end
 
 
 
@@ -32,9 +34,11 @@
 # cooking_time(10) ==> 10
 
 
+def cooking_time(eggs)
 
 
 
+end
 
 
 
