@@ -1,4 +1,5 @@
 require './kata.rb'
+require 'rspec'
 
 describe 'Greet' do
   it 'should greet the person accordingly' do
