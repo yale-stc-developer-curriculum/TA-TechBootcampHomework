@@ -5,7 +5,7 @@ Write a Deaf Grandma program.
   - To use your code, change to the directory containing deaf_grandma.rb and type:
 ``` $ ruby -r "./deaf_grandma.rb" -e "DeafGrandma::test" ```
   - To test your code (using rspec) type the following:
-``` $ rspec spec.rb ```
+``` $ rspec spec/spec.rb ```
 
 Here are the specifications:
 - Whatever you say to grandma (whatever you type in), she should respond with "HUH?! SPEAK UP, SONNY!" , unless you shout it (type in all capitals).
