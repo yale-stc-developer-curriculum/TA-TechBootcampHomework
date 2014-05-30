@@ -1,24 +1,11 @@
 # ------------------------------------------------------------------------------
-# You Do
-# ------------------------------------------------------------------------------
-# Specification:
-# write a function tenders_rand() that will return "It's Chicken Tenders Day!"
-# approximately 1/7 times it's called
-
-# Examples
-# tenders_rand() => "It's Chicken Tenders Day!"
-# tenders_rand() => "Nope."
-# tenders_rand() => "Nope."
-
+# Ruby control flow
+# Is It Chicken Tenders Day?
+# 5/30/2014
 # ------------------------------------------------------------------------------
 
-def tenders_rand()
-	if Random.rand(7) == 0  #achieves 1/7 probability
-		"It's Chicken Tenders Day!" 
-	else 
-		"Nope."
-	end
-end
+# To test any of your functions from the command line, type $ ruby tenders.rb
+# and follow the instructions...
 
 # ------------------------------------------------------------------------------
 # Specification
@@ -31,25 +18,8 @@ end
 # lunch("SUNDAY") => "steak"
 # ------------------------------------------------------------------------------
 
-# my solution -- yours may vary!
 def lunch(day)
-	day = day.downcase
-	case day
-	when "sunday"
-		"steak"
-	when "monday"
-		"hamburgers"
-	when "tuesday"
-		"pasta salad"
-	when "wednesday"
-		"eggplant parmesan"
-	when "thursday"
-		"chicken tenders"
-	when "friday"
-		"pizza"
-	when "saturday"
-		"fish"
-	end
+
 end
 
 # ------------------------------------------------------------------------------
@@ -71,18 +41,7 @@ end
 # ------------------------------------------------------------------------------
 
 def tenders_num(num)
-	mod = num % 7
-	days_left = 5 - mod    #calculate how many days left
 
-	if days_left < 0     #adjust in case days_left is negative
-		days_left = days_left.abs + 5
-	end
-
-	if days_left == 0   
-		"It's Chicken Tenders Day!" 
-	else 
-		"You have " + days_left.to_s + " days to go."
-	end
 end
 
 # ------------------------------------------------------------------------------
@@ -106,8 +65,7 @@ end
 # ------------------------------------------------------------------------------
 
 def tenders_adv(start, num)
-	num_adj = num - start + 1  #shift our number
-	tenders_num(num_adj)   #and call tenders_num
+
 end
 
 
@@ -129,39 +87,7 @@ end
 # ------------------------------------------------------------------------------
 
 def tenders_ultimate(start, num, day)
-	num_adj = num - start + 1    #adjust our number
-	mod = num_adj % 7     #take the modulus
 
-	day_adj = day.downcase
-
-	case day_adj         #convert our chicken-tenders day into a number
-	when "sunday"
-		val=1
-	when "monday"
-		val = 2
-	when "tuesday"
-		val = 3
-	when "wednesday"
-		val = 4
-	when "thursday"
-		val = 5
-	when "friday"
-		val = 6
-	when "saturday"
-		val = 7
-	end
-
-	days_left = val - mod    #calculate how many days left
-
-	if days_left < 0     #adjust in case days_left is negative
-		days_left = days_left.abs + val
-	end
-
-	if days_left == 0   
-		"It's Chicken Tenders Day!" 
-	else 
-		"You have " + days_left.to_s + " days to go."
-	end
 end
 
 
