@@ -1,0 +1,39 @@
+tenders_adv(start,num)
+===========================================
+> tenders_adv(4,5)
+You have 3 days to go.
+> tenders_adv(3,14)
+It's Chicken Tenders Day!
+> tenders_adv(6,27)
+You have 4 days to go.
+> tenders_adv(2,25)
+You have 2 days to go.
+> tenders_adv(2,28)
+You have 6 days to go.
+> tenders_adv(3,30)
+You have 5 days to go.
+
+
+
+tenders_ultimate(start,num,day)
+===========================================
+> tenders_ultimate(7,28,"tuesday")
+You have 2 days to go.
+> tenders_ultimate(7,29,"tuesday")
+You have 1 days to go.
+> tenders_ultimate(7,30,"tuesday")
+It's Chicken Tenders Day!
+> tenders_ultimate(7,31,"tuesday")
+You have 6 days to go.
+> tenders_ultimate(5,16,"friday")
+You have 1 days to go.
+> tenders_ultimate(2,28,"monday")
+You have 3 days to go.
+> tenders_ultimate(4,12,"wednesday")
+You have 2 days to go.
+> tenders_ultimate(5,19,"sunday")
+It's Chicken Tenders Day!
+> tenders_ultimate(6,24,"tuesday")
+You have 5 days to go.
+> tenders_ultimate(1,13,"saturday")
+You have 1 days to go.
