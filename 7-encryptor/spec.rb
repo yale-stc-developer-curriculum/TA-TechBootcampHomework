@@ -1,4 +1,4 @@
-require_relative 'encryptor_solution'
+require_relative 'encryptor'
 
 describe "encryptor" do
 
