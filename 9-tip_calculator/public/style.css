@@ -1,0 +1,80 @@
+body {
+	font-size: 14 px;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+table, th, tr, td
+{
+border: 1px solid black;
+}
+
+td, th
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: right;
+}
+.left
+{
+	text-align: left;
+	padding-right: 50px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+table
+{
+	border-collapse: collapse;
+}
+
+.textbox { 
+    background: white; 
+    border: 1px solid #DDD; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px #DDD inset; 
+    color: #666; 
+    outline: none; 
+    height:25px; 
+    width: 150px; 
+    margin: 5px;
+    text-align: right;
+    font-size: 14px;
+   } 
+
+h1 {
+font-family: Garamond, serif;
+line-height: 1em;
+color: #3264c8;
+font-weight:bold;
+font-size: 93px;
+text-shadow:0px 0px 0 rgb(25,75,175),1px 1px 0 rgb(10,60,160),2px 2px 0 rgb(-5,45,145),3px 3px 0 rgb(-21,29,129),4px 4px 0 rgb(-36,14,114),5px 5px 0 rgb(-51,-1,99), 6px 6px 0 rgb(-66,-16,84),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+margin-bottom: 0px;
+}
+
+.button {
+  background: #f0f0f0;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background-image: -ms-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background-image: -o-linear-gradient(top, #f0f0f0, #b0b0b0);
+  background-image: linear-gradient(to bottom, #f0f0f0, #b0b0b0);
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  color: #474747;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
