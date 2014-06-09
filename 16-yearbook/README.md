@@ -165,7 +165,21 @@ Play around with the CSS transforms.  See if you can't figure out how to do some
 
 ![fat guy](http://replygif.net/i/1483.gif)
 
-## 11. Heroku
+## 11. Github Pages
+Follow instructions at pages.github.com to deploy your HTML/CSS files to the internet.
+
+- Create a new repository named `Yearbook`
+    - go to [http://github.com] and click "New Repository". You can initilize a README.md and clone it down from the server.
+- Put your HTML/CSS files here, naming the yearbook page `index.html` and putting the css file in the same root directory.
+- Get your files onto a `gh-pages` branch of this repository, and push.
+- Your site will appear at `GITHUBUSERNAME.github.io/Yearbook`
+
+## 12. Heroku (optional)
+
+We'll cover deploying a Sinatra app to Heroku later in this class and we'll explain all about deployment, servers, and Heroku.
+
+If you get ahead, you can try to follow the below instructions to deploy this application using node.js to serve your two static files. This section is totally optional and we don't expect most people to do it.
+
 
 Create two new files `package.json` and `app.js` and fill them with the following code.  Read over the code, you know enough at this point to have a pretty good idea of what is going on.  These have lots of parallels to how a Sinatra app is set up in ruby, but this server is written in Javascript and runs on the Node.js Javascript framework.
 
