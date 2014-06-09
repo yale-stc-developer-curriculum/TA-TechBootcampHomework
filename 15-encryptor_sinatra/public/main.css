@@ -1,0 +1,174 @@
+body {
+	font-family: "helvetica neue", helvetica, sans-serif;
+	font-weight: 100;
+	font-size: 1.2em;
+	background-image: url('img.jpg');
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 100;
+	margin-top: 0em;
+	margin-bottom: 1em;
+	min-width: 250px;
+	border: 1px solid white;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+h2 {
+	font-weight: 100;
+	margin: 10px;
+}
+
+hr {
+	height: 1px;
+	border: none;
+	margin: 10px;
+	background-color: white;
+	color: white;
+}
+
+#container {
+	background-color: black;
+	opacity: 0.75;
+	padding: 50px;
+	display: inline-block;
+	color: white;
+	height: 100%;
+	overflow: hidden;
+}
+
+#col1 {
+	text-align: center;
+	display: inline-block;
+	height: 100%;
+	float: left;
+}
+
+#col2 {
+	color: white;
+	height: 90%;
+	margin-left: 100px;
+	min-width: 200px;
+	display: inline-block;
+	float: right;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-bottom: 10%;
+	text-align: center;
+}
+
+form {
+	display: block;
+	text-align: left;
+}
+
+input {
+	display: block;
+	border-radius: 2px;
+	height: 2.5em;
+	border: 0px;
+	padding: 10px;
+	font-size: 1em;
+	width: 250px;
+	margin-bottom: 1em;
+}
+
+input[type=submit] {
+	height: 2.5em;
+	background-color: #DBDBDB;
+	border: 0px;
+	padding: 0.66em;
+}
+
+input[type=submit]:hover {
+	background: #80A2BA;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+input[type=submit][value=Encrypt]:hover {
+	background: #80A2BA;
+}
+
+input[type=submit][value=Decrypt]:hover {
+	background: #D17B7B;
+}
+
+#history {
+	display: inline-block;
+	font-size: 1em;
+	height: 100%;
+	table-layout: fixed;
+}
+
+td:nth-of-type(2n+1) {
+	color: white;
+	max-width: 200px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	font-weight: 100;
+	padding: 10px;
+}
+
+td:nth-of-type(2) {
+	text-align: right;
+	color: white;
+	max-width: 50px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	font-weight: 100;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+
+	#container {
+		overflow: scroll;
+	}
+
+	body {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	#col1, #col2 {
+		height: auto;
+		display: block;
+		margin: 20px;
+		float: left;
+		clear: both;
+	}
+
+	input {
+		height: 30px;
+		font-size: 10px;
+	}
+
+	#col2 {
+		width: 252px;
+	}
+
+	#history {
+		font-size: 0.8em;
+	}
+
+}

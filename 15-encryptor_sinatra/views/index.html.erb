@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<link href="main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="container">
+			<div id="col1">
+				<h1>Encryptor</h1>
+				<form method="post" action="/">
+					<input type="text" name="plaintext" placeholder="Message">
+					<input type="number" name="rotation" placeholder="Rotation">
+					<input type="submit" name="action" value="Encrypt">
+					<input type="submit" name="action" value="Decrypt">
+				</form>
+			</div>
+			<% if !history.empty? %>
+				<div id="col2">
+					<h2>History</h2>
+					<hr>
+					<table id="history">
+						<tbody>
+							<col span="1" class="first-third-col">
+							<col id="rotation" span="1">
+							<col span="1" class="first-third-col">
+							<% history.each do |item| %>
+								<tr>
+									<td><%= item[0] %></td>
+									<td><%= item[1] %></td>
+									<td><%= item[2] %></td>
+								</tr>
+							<% end %>
+						</tbody>
+					</table>
+				</div>
+			<% end %>
+		</div>
+</body>
