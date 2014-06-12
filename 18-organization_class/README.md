@@ -1,6 +1,6 @@
-#Organizations
+#Part 1: Organization Class
 
-Your assignment is to create a class for Yale student organizations.
+Your assignment is to create an `Organization` class for Yale student organizations.
 
 ##Instance Variables
 
@@ -38,6 +38,9 @@ Your assignment is to create a class for Yale student organizations.
 - `spend_money(amount)` spends `amount` dollars of the organization's money
 	- if the organization does not have enough money for the purchase, please raise an error detailing by how much the organization is short 
 - `add_money(amount)` adds `amount` dollars to the organization's funds
+
+###PUPPIES
+
 - `buy_puppy(cost)` buys a puppy for `cost` dollars from the organization's funds.
 	- if the organization already has a puppy, please raise an error saying so -- only 1 puppy allowed!!
 	- if the organziation does not have enough money for the puppy, please raise an error explaining by how much the organization is short
@@ -51,3 +54,67 @@ Your assignment is to create a class for Yale student organizations.
 	- if the organization is selling a puppy:
 		- the revenue from the sale should be added to the organization's funds
 		- `@puppy` should be set to false
+
+#Part 2: Event Class
+
+Now you are to create an `Event` class, which will describe an organization's event.
+
+##Instance Variables
+
+- `@name` -- the name of the event
+- `@description` -- a description of the event
+- `@attendees` -- an array of the names of the attendees
+- `@start` -- a [DateTime object](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html) representing the start date and time of the event
+- `@end` -- a [DateTime object](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html) representing the end date and time of the event
+
+##Methods
+
+- start by defining your `initialize` method
+	- all organizations must have a `name`
+	- `description` should have a default value of `"My awesome event!"`
+	- `attendees` should have a default value of `[]`
+	- `start` and `end` should be optional parameters
+		- leave them as nil if no datetime is provided
+		- you can expect anything passed to either `start` or `end` to be a [DateTime object](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/date/rdoc/DateTime.html)
+- use the `attr_accessor :var` method to define a complete set of accessor methods
+	- see a [complete explanation of `attr_accessor`](https://github.com/yale-stc-developer-curriculum/YEI-STC-Bootcamp-2014/blob/master/lectures/ruby/attr_accessor/README.md) in the lectures repo.
+- `add_attendee(name)` adds an attendee named `name` to the event list
+- `delete_attendee(name)` deletes the attendee named `name` from the event list
+
+#Part 3: Person Class
+
+In this part, you will define a `Person` class, which will describe a person!
+
+##Instance Variable
+
+- `@name` -- the name of the person
+- `@age` -- an integer representing the age of the person
+- `@college` -- the person's residential college, if applicable.
+
+##Methods
+
+- start by defining your `initialize` method
+	- all people must have a `name`
+	- `age` should be an optional parameter
+	- `college` should also be an optional parameter
+- use the `attr_accessor :var` method to define a complete set of accessor methods
+	- see a [complete explanation of `attr_accessor`](https://github.com/yale-stc-developer-curriculum/YEI-STC-Bootcamp-2014/blob/master/lectures/ruby/attr_accessor/README.md) in the lectures repo.
+
+#Part 4: Refactoring
+
+Now it's time to go back and **refactor** our previous code.
+
+- Within the `Organization` class, change the `@members` variable to be an array of `Person` objects.
+ 	- `add_member(name)` should be updated to add a `Person` object with the `@name` `name` to the `@members` array
+ 	- `delete_member(name)` should be updated to delete the `Person` object with the `@name` `name` from the `@members` array.
+- Within the `Event` class, change the `@attendees` variable to be an array of `Person` objects. 
+ 	- `add_attendee(name)` should be updated to add a `Person` object with the `@name` `name`
+ 	- `delete_attendee(name)` should be updated to delete the `Person` object with the `@name` `name` from the `@attendees` array.
+- Add an `@events` array to the `Organization` class, which will be a list of `Event` objects.
+	- Please define the following additional methods
+		- `get_events` returns an organization's events 
+			- Challenge 1: only return future events
+			- Challenge 2: return the events in chronological order
+		- `add_event(event_object_name)` adds the `Event` object named `event_object_name` to the `@events` array
+		- `delete_event(event_name)` deletes the `Event` object with the `@name` `event_name` from the `@events` array
+
