@@ -1,35 +1,111 @@
-#Is It Chicken Tenders Day? Sinatra App
+###Sinatra CRUD Application
+Goal: Create an application that can CRUD (Create, Retrieve, Update, Destroy) youtubesets.
 
-Your assignment is to create a chicken tenders Sinatra web application from scratch.
+###1. Base Specification (Required)
+  - Create each of the routes listed in [[RESTful Routes]]
+  - Layout
+    - Each page should have a navigation bar at the top.
+      - This bar should include a link to "Home" with the URL `"/"`
+      - It should also include a link to "Sets" with the URL `"/sets"`
+  - Data Input & Storage
+    - We can assume that only youtube video numbers will be submitted (not `www.youtube.com/watch?v=jZVdDl_asYY` just `jZVdDl_asYY`)
+    - Youtube video numbers should be submitted as a newline-separated list (press enter after each link).
+    - Add a description field to each playlist. (see Songza's playlist descriptions for some fun examples)
+    - Youtube video numbers should be stored in the session, in a variable structured as a hash with the format `"sets" => { "SETNAME" => { "name" => "SETNAME", "vidnums" => ["VID1", "VID2", "VID3"], "description" => "This is the best playlist ever!" } }`
+    - each set will use its name as the key in the `sets` hash and will include the keys `name` and `vidnums` pointing to a string with the set name and an array with the Youtube links, respectively.
+  - Hints for Destroy
+    - Anchored links (`<a href=''...>`) can only pass method="post" method (some claim they also do well with get)
+    - Pure html forms can only pass method="post" and method="get"
+    - to pass method="delete" in Sinatra, we need to enable method overriding by adding "_method = true" in the configure method of our app in the .rb file, then in the .erb file (or any part of HTML code) we can use method="delete" and it will be addressed properly.
+    - For Destroy, see http://www.sinatrarb.com/configuration.html
+  - Only work on one feature at a time, here's an example path:
+    + Get a given youtube video to be embedded (in an erb file)
+    + Get the application to work for a single hard-coded video, stored in a Ruby variable
+    + Get the application to work by choosing a random video from a hard-coded set, stored in a Ruby variable
+    + Get the application to accept user input of video tags, storing them in the session hash
+    + Use the session hash instead of the hard-coded ruby variables
+  - The application should work for `http://` but doesn't have to work for `https://` (that requires a trick I'm not interested in you learning right now)
+  - At least check out the RuboCop/Ruby Style Guide (below).
 
-##File Structure
 
-1. In this directory, create a `tenders.rb` file.
-2. Create two new directories: `public` and `views`.
-	1. In the `public` directory, create a `style.css` file
-	2. In the `views` directory, create your `index.erb` file
+####Routes
+Your application should include each of these routes.
 
-Now we should be ready to go.
+Sinatra only uses the HTTP Verbs and the URLs. Rails additionally uses Controller and Action - these are just here for reference for now.
 
-##Let's start with tenders.rb
+HTTP Verb | URL | Controller | Action | used for | Must create View?
+--- | --- | --- | --- | --- | ---
+GET | /sets | Set | index | display all sets in an overview | Yes
+GET | /sets/new | Set | new | return an HTML form for creating a new set | Yes
+POST | /sets | Set | create | create a new set | No
+GET | /sets/beyonce | Set | show | display a specific set | Yes
+GET | /sets/beyonce/play | Set | a custom one! | play a specific set | Yes
+GET | /sets/beyonce/edit | Set | edit | return an HTML form for editing a set | Yes
+PUT | /sets/beyonce | Set | update | update a specific set | No
+DELETE | /sets/beyonce | Set | destroy | delete a specific set | Yes
 
-1. First, you're going to want to `require 'sinatra'` at the top of your ruby file.
-2. Next, go ahead and define a `tenders(day)` function.
-	1. `tenders(day)` returns "It's Chicken Tenders Day!" if the day is "thursday" (case-insensitive) and "Nope." otherwise.
-3. Time to dive into the sinatra part. Create the `get '/' do...` block.
-4. Within this block, call tenders(day) on a value you pass into it (we are just hard-coding the day for now).
-5. Finally, you need to pass this result into your erb file.
-	1. Something of the form: `erb :index, :locals => {:result => result}` should do the trick
-	2. I saved the result of `tenders(day)` to `result`, and will access this variable using `<%= result %>`.
 
-##Time to Edit the ERB File and the Style.CSS
 
-1. Go ahead and create your webpage. The string you passed into the erb file will be available using `<%= result %>`. 
-2. Style the page however you like.
-3. The `style.css` file is located in the `public` directory you created.
+###4. Bonus (Optional)
+These are optional for everyone, but you'll potentially learn the most from these
+  - Meet all [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide) guidelines. You can test this by running [rubocop](https://github.com/bbatsov/rubocop).
+    - Add it to your gemfile and `bundle install` (or just `gem install rubocop`)
+    - (restart the terminal)
+    - `rubocop` (in the right directory)
+  - Get the input to handle additional list formats - comma separated, space separated, tab separated.
+  - Get the input to accept whole URLs instead of just the video numbers (&v=a1hNo91)
+    - One way would be to use a Regular Expression
+    - Another way would be to use Ruby's URI Parser
+  - Make your application work over HTTPS as well as HTTP
 
-##Try It Out
+### To Heroku
 
-1. Navigate to the proper directory and run: `ruby tenders.rb`.
-2. Sinatra will take the stage.
-3. Navigate to [localhost:4567](http://localhost:4567) in your browser.
+Go [here](https://devcenter.heroku.com/articles/quickstart), make a Heroku account, and install the Heroku toolbelt. Once that's done, type
+
+```bash
+heroku login
+```
+
+We gotta make sure Heroku doesn't get confused about where to get Gems from and what version of Ruby to use when it runs your app.  Make sure that you are specifying a source for Gems and a version of ruby in your Gemfile in a similar manner to the following:
+
+
+```Gemfile
+source "https://rubygems.org"
+ruby "2.0.0"
+```
+
+Now create a new file named `Procfile` (no file extension, just `Procfile`).  Fill `Procfile` with the following.
+
+```
+web: bundle exec ruby [filename].rb -p $PORT
+```
+
+(Replace '[filename]' with the name of your .rb file)
+
+This file just tells Heroku how to run your app - by executing your .rb file and serving the application on the specified `$PORT`.  Now make a new folder that resides _outside_ your Git homework repository.  Copy everything inside your `13-random_beyonce` folder into this new folder.  **Nothing will work right if you mess this part up!**
+
+![crying](http://i.imgur.com/YAbmJzL.gif)
+
+Run the following commands in a terminal window _inside this new directory_:
+
+```bash
+git init
+git add .
+git commit -m "init"
+```
+
+Now type
+
+```
+heroku create
+```
+
+This `heroku create` command is really cool because it creates a new "virtual computer" inside one of Heroku's data center warehouses, and sets up a Git remote on your machine that you can use to push this website up into their data center!  For free, too!
+
+Then
+
+```
+git push heroku master
+```
+
+If everything worked right, it'll give you a url to view your app at.
