@@ -57,3 +57,55 @@ These are optional for everyone, but you'll potentially learn the most from thes
     - One way would be to use a Regular Expression
     - Another way would be to use Ruby's URI Parser
   - Make your application work over HTTPS as well as HTTP
+
+### To Heroku
+
+Go [here](https://devcenter.heroku.com/articles/quickstart), make a Heroku account, and install the Heroku toolbelt. Once that's done, type
+
+```bash
+heroku login
+```
+
+We gotta make sure Heroku doesn't get confused about where to get Gems from and what version of Ruby to use when it runs your app.  Make sure that you are specifying a source for Gems and a version of ruby in your Gemfile in a similar manner to the following:
+
+
+```Gemfile
+source "https://rubygems.org"
+ruby "2.0.0"
+```
+
+Now create a new file named `Procfile` (no file extension, just `Procfile`).  Fill `Procfile` with the following.
+
+```
+web: bundle exec ruby [filename].rb -p $PORT
+```
+
+(Replace '[filename]' with the name of your .rb file)
+
+This file just tells Heroku how to run your app - by executing your .rb file and serving the application on the specified `$PORT`.  Now make a new folder that resides _outside_ your Git homework repository.  Copy everything inside your `13-random_beyonce` folder into this new folder.  **Nothing will work right if you mess this part up!**
+
+![crying](http://i.imgur.com/YAbmJzL.gif)
+
+Run the following commands in a terminal window _inside this new directory_:
+
+```bash
+git init
+git add .
+git commit -m "init"
+```
+
+Now type
+
+```
+heroku create
+```
+
+This `heroku create` command is really cool because it creates a new "virtual computer" inside one of Heroku's data center warehouses, and sets up a Git remote on your machine that you can use to push this website up into their data center!  For free, too!
+
+Then
+
+```
+git push heroku master
+```
+
+If everything worked right, it'll give you a url to view your app at.
