@@ -3,8 +3,13 @@ You should read and complete the application in [Michael Hartl's "Ruby on Rails 
 
 (Do you know how to pronounce [Hartl](http://www.pronouncenames.com/pronounce/HARTL)?)
 
+You can keep this project in the homework repository. Skip the `git init` step that Hartl asks you to do (make sure you understand why he's asking you to do that and why we say you can skip it).
 
-##Rails Project 3 - Bootcamp Guided Project
+
+##Rails Project 3 - Small-Scope Open Ended Project
+
+This project should be done in pairs, TAs will assign those for this project. Each pair can create their own shared repository and store the code there.
+
 
 ###Logistics
 - Create Github Issues for each feature you want to do, and document everything clearly.
